@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #ededed;
+  
+  --color-zg-purple: #7c3aed;
+  --color-zg-purple-light: #8b5cf6;
+  --color-zg-purple-dark: #5b21b6;
+  --color-zg-purple-glow: rgba(124, 58, 237, 0.4);
+
+  --color-zg-dark: #0f0f13;
+  --color-zg-dark-card: rgba(30, 30, 36, 0.7);
+  --color-zg-dark-border: rgba(124, 58, 237, 0.3);
+  
+  --shadow-zg-neon: 0 0 15px var(--color-zg-purple-glow);
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .zg-glass {
+    background-color: var(--color-zg-dark-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-zg-dark-border);
+    box-shadow: var(--shadow-zg-neon);
+  }
+}
